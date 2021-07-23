@@ -13,6 +13,6 @@ variables:
     - name: DEBUG
       value: "true"
 steps:
-- task: SpectralScan@0
+- task: SpectralScan@0.1.45
   inputs:
     connection: 'spectral'
