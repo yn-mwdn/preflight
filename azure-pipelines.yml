@@ -13,6 +13,14 @@ variables:
     - name: DEBUG
       value: "true"
 steps:
+- task: Preflight@1
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      ./preflight -h
 - task: SpectralScan@0.1.45
   inputs:
     connection: 'spectral'
